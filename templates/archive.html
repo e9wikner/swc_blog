@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load django_markdown %}
+
+{% block nav-item-archive-status %}active{% endblock %}
+
+{% block body %}
+    {% if posts %}
+        {% for post in posts %}
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{ post.title }}</h2>
+                <p class="blog-post-meta"></p>
+                {{ post.body|markdown|truncatewords_html:30 }}
+            </div> <!-- /.blog-post -->
+        {% endfor %}
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+{% endblock %} <!-- body -->

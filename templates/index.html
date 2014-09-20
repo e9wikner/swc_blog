@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load django_markdown %}
+
+{% block nav-item-blog-status %}active{% endblock %}
+
+{% block body %}
+    {% if posts %}
+        {% for post in posts %}
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{ post.title }}</h2>
+                <p class="blog-post-meta"></p>
+                {{ post.body|markdown }}
+            </div> <!-- /.blog-post -->
+        {% endfor %}
+        <!-- <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+        </ul> -->
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+{% endblock %} <!-- body -->

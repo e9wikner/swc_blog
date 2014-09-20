@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Stefan Wikner">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Stefan Wikner Consulting - Jag kan själv</title>
+
+        <!-- Bootstrap core CSS TODO: använda STATIC_URL här-->
+        <link href="/static/blog/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="/static/blog/css/theme.css" rel="stylesheet">
+        <link href="/static/blog/css/pygments/colorful.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item {% block nav-item-blog-status %}{% endblock %}"
+                       href="{% url 'index' %}">Blog</a>
+                    <a class="blog-nav-item {% block nav-item-archive-status %}{% endblock %}"
+                       href="{% url 'archive' %}">Arkiv</a>
+                    <a class="blog-nav-item {% block nav-item-about-status %}{% endblock %}"
+                       href="{% url 'about' %}">Om</a>
+                </nav>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class="blog-header">
+            <h1 class="blog-title">Jag kan själv</h1>
+            <p class="lead blog-description">En weblog om DIY, programmering, Raspberry PI och annat.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-8 blog-main">
+
+                {% block body %}
+                {% endblock %}
+
+            </div><!-- /.blog-main -->
+
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+                {% block sidebar_latest %}
+                <div class="sidebar-module">
+                    <h4>Senaste inlägg</h4>
+                    <ol class="list-unstyled">
+                    </ol>
+                </div>
+                {% endblock %}
+
+                {% block sidebar_links %}
+                <div class="sidebar-module">
+                    <h4>Länkar</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://github.com/e9wikner">GitHub</a></li>
+                        <li><a href="http://se.linkedin.com/pub/stefan-wikner/0/531/668/">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/s_wikner">Twitter</a></li>
+                        <li><a href="http://www.sassylady.se">Sailing blog Sassy Lady</a></li>
+                    </ol>
+                </div>
+                {% endblock %}
+
+            </div><!-- /.blog-sidebar -->
+
+        </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+        <p>Drivs av <a href="https://www.djangoproject.com/">Django</a> och <a href="https://getbootstrap.com">Bootstrap</a>.</p>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/static/blog/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
