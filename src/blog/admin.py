@@ -1,6 +1,7 @@
 from django.contrib import admin
-from swc_blog.models import Post
 from django_markdown.admin import MarkdownModelAdmin
+
+from .models import Post
 
 
 class PostAdmin(MarkdownModelAdmin):
