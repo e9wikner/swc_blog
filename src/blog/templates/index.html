@@ -10,7 +10,7 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">{{ post.title }}</h2>
                 <p class="blog-post-meta"></p>
-                {{ post.body|markdown }}
+                {{ post.body|markdown:"codehilite" }}
             </div> <!-- /.blog-post -->
         {% endfor %}
         <!-- <ul class="pager">
