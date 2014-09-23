@@ -10,8 +10,8 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">{{ post.title }}</h2>
                 <p class="blog-post-meta"></p>
-                {{ post.body|markdown|truncatewords_html:30 }}
-            </div> <!-- /.blog-post -->
+                {{ post.body|markdown:"codehilite"|truncatewords_html:30 }}
+            </div> <!-- /.swc_blog-post -->
         {% endfor %}
     {% else %}
         <p>There are no posts.</p>

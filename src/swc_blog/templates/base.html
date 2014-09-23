@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load staticfiles %}
+
 <html lang="en">
 
     <head>
@@ -13,10 +15,10 @@
         <title>Stefan Wikner Consulting - Jag kan själv</title>
 
         <!-- Bootstrap core CSS TODO: använda STATIC_URL här-->
-        <link href="/static/blog/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{% static "swc_blog/css/bootstrap.min.css" %}" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="/static/blog/css/theme.css" rel="stylesheet">
-        <link href="/static/blog/css/pygments/colorful.css" rel="stylesheet">
+        <link href="{% static "swc_blog/css/theme.css" %}" rel="stylesheet">
+        <link href="{% static "swc_blog/css/pygments/colorful.css" %}" rel="stylesheet">
 
     </head>
 
@@ -49,7 +51,7 @@
                 {% block body %}
                 {% endblock %}
 
-            </div><!-- /.blog-main -->
+            </div><!-- /.swc_blog-main -->
 
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 
@@ -73,7 +75,7 @@
                 </div>
                 {% endblock %}
 
-            </div><!-- /.blog-sidebar -->
+            </div><!-- /.swc_blog-sidebar -->
 
         </div><!-- /.row -->
 
@@ -88,7 +90,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/static/blog/js/bootstrap.min.js"></script>
+    <script src="{% static "swc_blog/js/bootstrap.min.js" %}"></script>
 
     </body>
 </html>

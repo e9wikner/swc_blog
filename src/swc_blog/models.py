@@ -28,13 +28,13 @@ class Post(models.Model):
                   "slug": self.slug}
 
         if self.status == DRAFT:
-            # return "blog-view-post-draft", None, kwargs
-            return "blog-view-post", None, kwargs
+            # return "swc_blog-view-post-draft", None, kwargs
+            return "swc_blog-view-post", None, kwargs
         elif self.upcoming:
-            # return "blog-view-post-upcoming", None, kwargs
-            return "blog-view-post", None, kwargs
+            # return "swc_blog-view-post-upcoming", None, kwargs
+            return "swc_blog-view-post", None, kwargs
         else:
-            return "blog-view-post", None, kwargs
+            return "swc_blog-view-post", None, kwargs
 
     @property
     def upcoming(self):

@@ -1,3 +1,5 @@
+#!/bin/python3"
+
 import os
 from setuptools import setup
 
@@ -5,14 +7,14 @@ from setuptools import setup
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='blog',
-    packages=['blog'],
-    package_dir={'blog': 'src/blog'},
-    package_data={'blog': ['templates/*',
-                           'static/blog/css/bootstrap.min.css',
-                           'static/blog/css/theme.css',
-                           'static/blog/js/bootstrap.min.js',
-                           'static/blog/css/pygments/colorful.css']},
+    name='django-swc-blog',
+    packages=['swc_blog'],
+    package_dir={'swc_blog': 'src/swc_blog'},
+    package_data={'swc_blog': ['templates/*',
+                           'static/swc_blog/css/bootstrap.min.css',
+                           'static/swc_blog/css/theme.css',
+                           'static/swc_blog/js/bootstrap.min.js',
+                           'static/swc_blog/css/pygments/colorful.css']},
     version='0.1',
     license='MIT License',
     description='A simple Django weblog app.',
